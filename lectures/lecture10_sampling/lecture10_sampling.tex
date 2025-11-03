@@ -312,7 +312,7 @@ X_s(j\Omega) = \frac{1}{2\pi}X_c(j\Omega) * S(j\Omega)
         ymin=0, ymax=1.3,
         axis lines=middle,
         xtick={-12,-9,-3,0,3,9,12},
-        xticklabels={$-2\Omega_s$,{},$-\Omega_N$,$0$,$\Omega_N$,{},$2\Omega_s$},
+        xticklabels={$-\Omega_s$,{},$-\Omega_N$,$0$,$\Omega_N$,{},$\Omega_s$},
         title={Sampled Spectrum: $\Omega_s = 8$ rad/s, $\Omega_N = 3$ rad/s (No Overlap)},
         ytick={1},
         yticklabels={1}
@@ -434,7 +434,7 @@ or equivalently:
         ymin=0, ymax=1.0,
         axis lines=middle,
         xtick={-12.56,-6.28,0,6.28,12.56},
-        xticklabels={$-2\Omega_s$,$-\Omega_s$,$0$,$\Omega_s$,$2\Omega_s$},
+        xticklabels={$-\Omega_s$,$-\Omega_s/2$,$0$,$\Omega_s/2$,$\Omega_s$},
         title={Continuous Frequency Variable},
         ytick={0.333},
         yticklabels={$\frac{1}{T}$}
@@ -601,12 +601,12 @@ X_r(j\Omega) = H_r(j\Omega) \cdot X_s(j\Omega) = X_c(j\Omega) \quad \text{if } \
 \textbf{Sampling}: $T = 1/6000$ s $\Rightarrow$ $\Omega_s = 12000\pi$ rad/s
 
 \vspace{0.3cm}
-\textbf{Check Nyquist}: $\Omega_s = 12000\pi > 2\Omega_0 = 8000\pi$ \checkmark
+\textbf{Check Nyquist}: $\Omega_s = 12000\pi > 2\Omega_0 = 8000\pi$ 
 
 \vspace{0.3cm}
 \textbf{Sampled Sequence}:
 \[
-x[n] = \cos(4000\pi \cdot n/6000) = \cos(2\pi n/3)
+x[n] = \cos(4000\pi \cdot n/6000) = \cos[2\pi n/3]
 \]
 
 Normalized frequency: $\omega_0 = \Omega_0, T = 2\pi/3$
@@ -811,8 +811,7 @@ X_s(j\Omega) = \frac{1}{T}\sum_{k=-\infty}^{\infty}X_c(j(\Omega - k\Omega_s))
 \vspace{0.3cm}
 \textbf{Practical Considerations}:
 \begin{itemize}
-    \item Real signals are never perfectly bandlimited
-    \item Anti-aliasing filters used before sampling
+    \item Real signals are never perfectly bandlimited (noise, harmonics)
     \item Oversampling provides guard band
     \item Trade-off: sampling rate vs. computation/storage
 \end{itemize}
@@ -855,8 +854,6 @@ For $\Omega_c = \pi/T$:
 \begin{itemize}
     \item Digital audio: $f_s = 44.1$ kHz (covers 0-20 kHz hearing range)
     \item Speech: $f_s = 8$ kHz (telephone quality)
-    \item Video: Various rates depending on bandwidth
-    \item Software-defined radio, data acquisition, control systems
 \end{itemize}
 
 \vspace{0.5cm}
