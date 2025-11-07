@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.29)  7 NOV 2025 10:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.2)  16 SEP 2025 13:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/quizzes/quiz05/ms_quiz05.tex"
-(c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/quizzes/quiz05/ms_quiz05.tex
+**c:/Users/mseminario2/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/quizzes/ms_quiz03/ms_quiz03.tex
+(c:/Users/mseminario2/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/quizzes/ms_quiz03/ms_quiz03.tex
 LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-07-19>
+L3 programming layer <2025-07-20>
 (c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (c:/texlive/2025/texmf-dist/tex/latex/base/size10.clo
@@ -413,8 +413,8 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 ) (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count332
-) (./ms_quiz05.aux)
-\openout1 = `ms_quiz05.aux'.
+) (./ms_quiz03.aux)
+\openout1 = `ms_quiz03.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
@@ -498,27 +498,25 @@ LaTeX Warning: No \author given.
 
 [1
 
-{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-[2] (./ms_quiz05.aux)
+{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./ms_quiz03.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-07-19>
+L3 programming layer <2025-07-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14114 strings out of 467815
- 278919 string characters out of 5436410
- 667791 words of memory out of 5000000
- 42501 multiletter control sequences out of 15000+600000
+ 14111 strings out of 467801
+ 278835 string characters out of 5436090
+ 661091 words of memory out of 5000000
+ 42512 multiletter control sequences out of 15000+600000
  634988 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,8n,91p,505b,253s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on ms_quiz05.pdf (2 pages, 137712 bytes).
+ 84i,6n,91p,503b,225s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on ms_quiz03.pdf (1 page, 87748 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
