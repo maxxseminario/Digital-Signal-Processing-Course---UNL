@@ -1,9 +1,9 @@
-PWD c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/quizzes/quiz05
+PWD c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/quizzes/quiz06
 INPUT c:/texlive/2025/texmf.cnf
 INPUT c:/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/quizzes/quiz05/ms_quiz05.tex
-OUTPUT ms_quiz05.log
+INPUT c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/quizzes/quiz06/ms_quiz06.tex
+OUTPUT ms_quiz06.log
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/size10.clo
@@ -157,10 +157,10 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./ms_quiz05.aux
-INPUT ./ms_quiz05.aux
-INPUT ms_quiz05.aux
-OUTPUT ms_quiz05.aux
+INPUT ./ms_quiz06.aux
+INPUT ./ms_quiz06.aux
+INPUT ms_quiz06.aux
+OUTPUT ms_quiz06.aux
 INPUT c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -208,19 +208,28 @@ INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-OUTPUT ms_quiz05.pdf
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+OUTPUT ms_quiz06.pdf
 INPUT c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT ms_quiz05.aux
+INPUT ms_quiz06.aux
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
-INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
-INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb
