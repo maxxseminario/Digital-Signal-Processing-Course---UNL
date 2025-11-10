@@ -27,6 +27,7 @@ This repository contains LaTeX code and course materials for ECEN 463: Digital S
   10. Z Transform Properties
   11. Sampling
   12. Discrete Processing of Continous Time Signals
+  13. Continuous Time Processing of Discrete Signals
 
 - **assignments/**  
   Homework and project assignments for the course.
