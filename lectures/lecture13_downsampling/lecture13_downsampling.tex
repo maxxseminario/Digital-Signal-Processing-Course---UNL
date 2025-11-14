@@ -303,6 +303,93 @@ Setup: Compression factor too large, spectral copies overlap.
 \end{center}
 \end{frame}
 
+\begin{frame}{Downsampling with Aliasing - Frequency Domain}
+\small
+
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+  \begin{groupplot}[
+    group style={group size=1 by 3, vertical sep=0.9cm},
+    width=11.6cm,
+    height=3.05cm,
+    axis lines=middle,
+    xmin=-11.1, xmax=11.1,
+    ymin=0, ymax=1.15,
+    tick label style={font=\scriptsize},
+    label style={font=\scriptsize},
+    title style={font=\scriptsize},
+    xtick={-10.9956,-9.4248,-7.85398,-6.2832,-4.7124,-3.1416,-1.5708,0,1.5708,3.1416,4.7124,6.2832,7.85398,9.4248,10.9956},
+    xticklabels={$-7\pi/2$,$-3\pi$,$-5\pi/2$,$-2\pi$,$-3\pi/2$,$-\pi$,$-\pi/2$,$0$,$\pi/2$,$\pi$,$3\pi/2$,$2\pi$,$5\pi/2$,$3\pi$,$7\pi/2$},
+    xlabel={$\omega$}
+  ]
+
+  %------------------------------------------------------
+  % Plot 1: Original spectrum with endpoints at ±Ω_N (numeric y tick 1)
+  %------------------------------------------------------
+  \def\OmegaN{2.2}
+  \nextgroupplot[
+    title={$X_c(e^{j\omega})$},
+    ytick={0,1},
+    yticklabels={$0$,$1$}
+  ]
+  \addplot[blue!80!black, very thick] coordinates {
+    (-11.1,0) (-\OmegaN,0) (0,1) (\OmegaN,0) (11.1,0)
+  };
+  \node[red!70!black, font=\scriptsize, anchor=north east] at (axis cs:-\OmegaN,0) {$-\Omega_N$};
+  \node[red!70!black, font=\scriptsize, anchor=north west] at (axis cs:\OmegaN,0) {$+\Omega_N$};
+  \node[blue!60!black, font=\scriptsize] at (axis cs:0,-0.23) {Bandwidth extends to $\pm\Omega_N$};
+
+  %------------------------------------------------------
+  % Plot 2: Narrow central triangle and narrow alias replicas at ±2π (peak labeled 1/T)
+  %------------------------------------------------------
+  \nextgroupplot[
+    title={$X(e^{j\omega})$},
+    ytick={0,1},
+    yticklabels={$0$,$1/T$}
+  ]
+  % Central narrow triangle: support [-π/2, π/2]
+  \addplot[blue!85!black, very thick]
+    coordinates {(-1.5708,0) (0,1) (1.5708,0)};
+  % Narrow replica at +2π: support [3π/2,5π/2] = [4.7124,7.85398]
+  \addplot[orange!85!black, thick, dashed]
+    coordinates {(4.7124,0) (6.2832,1) (7.85398,0)};
+  % Narrow replica at -2π: support [-5π/2,-3π/2] = [-7.85398,-4.7124]
+  \addplot[green!60!black, thick, dotted]
+    coordinates {(-7.85398,0) (-6.2832,1) (-4.7124,0)};
+  % Vertical guides for narrow central triangle
+  \draw[gray!55,dotted] (axis cs:-1.5708,0) -- (axis cs:-1.5708,1.05);
+  \draw[gray!55,dotted] (axis cs: 1.5708,0) -- (axis cs: 1.5708,1.05);
+  \node[red!70!black, font=\scriptsize] at (axis cs:0,-0.25) {Narrow replicas shown individually};
+
+  %------------------------------------------------------
+  % Plot 3: Wide triangles (width 3π) centered at 0, ±2π (peak labeled 1/T)
+  %------------------------------------------------------
+  \nextgroupplot[
+    title={$X_d(e^{j\omega})$},
+    ytick={0,1},
+    yticklabels={$0$,$1/MT$}
+  ]
+  % Central wide triangle: support [-3π/2, 3π/2] = [-4.7124,4.7124]
+  \addplot[blue!85!black, very thick]
+    coordinates {(-4.7124,0) (0,1) (4.7124,0)};
+  % Wide replica at +2π: center 2π; support [2π-3π/2, 2π+3π/2] = [π/2, 7π/2] = [1.5708,10.9956]
+  \addplot[orange!85!black, thick, dashed]
+    coordinates {(1.5708,0) (6.2832,1) (10.9956,0)};
+  % Wide replica at -2π: support [-2π-3π/2, -2π+3π/2] = [-7π/2, -π/2] = [-10.9956,-1.5708]
+  \addplot[green!60!black, thick, dotted]
+    coordinates {(-10.9956,0) (-6.2832,1) (-1.5708,0)};
+  % Vertical guides for central wide triangle edges
+  \draw[gray!55,dotted] (axis cs:-4.7124,0) -- (axis cs:-4.7124,1.05);
+  \draw[gray!55,dotted] (axis cs: 4.7124,0) -- (axis cs: 4.7124,1.05);
+  \node[purple!70!black, font=\scriptsize] at (axis cs:0,-0.25) {Wide replicas (same shape) centered at shifts};
+
+  \end{groupplot}
+\end{tikzpicture}
+\end{center}
+
+% \textbf{Note:} Third plot illustrates a larger bandwidth case (each replica width $3\pi$) still centered at $0,\pm 2\pi$; all shapes are individual (no summation).
+\end{frame}
+
 \section{Decimation}
 
 \begin{frame}{Decimation: Prefiltering Before Downsampling}
@@ -340,84 +427,225 @@ Ideal filter:
 After filtering, $\tilde{x}[n]$ has bandwidth $\pi/M$, so $\tilde{x}_d[n]=\tilde{x}[nM]$ is alias-free.
 \end{frame}
 
-\begin{frame}{Decimation Example: $M=3$ With Prefiltering}
+% \begin{frame}{Decimation Example: $M=3$ With Prefiltering}
+% \small
+% \begin{center}
+% \begin{tikzpicture}[scale=0.78]
+%   \begin{groupplot}[
+%     group style={group size=3 by 1, horizontal sep=1.1cm},
+%     width=4.8cm,
+%     height=2.7cm,
+%     axis lines=middle,
+%     ymin=0, ymax=1.15,
+%     tick label style={font=\scriptsize},
+%     label style={font=\scriptsize},
+%     title style={font=\scriptsize}
+%   ]
+
+%   % 1) Ideal LPF with vertical cutoffs at ±π/3
+%   \nextgroupplot[
+%     title={$\tilde{H}_d(e^{j\omega})$},
+%     xmin=-3.4, xmax=3.4,
+%     xtick={-3.1416,-1.0472,0,1.0472,3.1416},
+%     xticklabels={$-\pi$,$-\pi/3$,$0$,$\pi/3$,$\pi$},
+%     xlabel={$\omega$}
+%   ]
+%   \addplot[red, very thick] coordinates {
+%     (-3.4,0) (-3.1416,0)
+%     (-1.0472,0) (-1.0472,1)
+%     ( 1.0472,1) ( 1.0472,0)
+%     ( 3.1416,0) ( 3.4,0)
+%   };
+
+%   % 2) Filtered X: original had energy to ±π/2 (triangular),
+%   %    after LPF it is zeroed above ±π/3.
+%   %    Show as a "trapezoid-like" outline: verticals at ±π/3 and a triangular top
+%   \nextgroupplot[
+%     title={$\tilde{X}(e^{j\omega})$ (cut at $\pm\pi/3$)},
+%     xmin=-3.4, xmax=3.4,
+%     xtick={-1.0472,0,1.0472},
+%     xticklabels={$-\pi/3$,$0$,$\pi/3$},
+%     xlabel={$\omega$}
+%   ]
+%   % Original (pre-filter) triangular spectrum to ±π/2 (faint, dashed for context)
+%   \addplot[blue!50, dashed, very thick] coordinates {(-3.4,0) (-1.5708,0) (0,1) (1.5708,0) (3.4,0)};
+%   % Vertical cutoffs at ±π/3 (drop to 0 outside passband)
+%   \addplot[blue, very thick] coordinates {(-1.0472,0) (-1.0472,0.3333)};
+%   \addplot[blue, very thick] coordinates {( 1.0472,0.3333) ( 1.0472,0)};
+%   % Triangular top within passband: value 1 at 0, value 1/3 at ±π/3
+%   \addplot[blue, very thick] coordinates {(-1.0472,0.3333) (0,1) (1.0472,0.3333)};
+%   % Guides at ±π/3 and ±π/2
+%   \draw[red!60, dotted] (axis cs:-1.0472,0) -- (axis cs:-1.0472,1.05);
+%   \draw[red!60, dotted] (axis cs: 1.0472,0) -- (axis cs: 1.0472,1.05);
+%   \draw[gray!60, dotted] (axis cs:-1.5708,0) -- (axis cs:-1.5708,1.05);
+%   \draw[gray!60, dotted] (axis cs: 1.5708,0) -- (axis cs: 1.5708,1.05);
+
+%   % 3) Downsampled by M=3: \tilde{X}_d(ω) = (1/3) \tilde{X}(ω/3)
+%   %    Bandwidth stretches to ±π, apex scales to 1/3, edges at ±π are 1/9.
+%   \nextgroupplot[
+%     title={$\tilde{X}_d(e^{j\omega}) = \tfrac{1}{3}\tilde{X}(e^{j\omega/3})$ (downsample by 3)},
+%     xmin=-3.4, xmax=3.4,
+%     xtick={-3.1416,0,3.1416},
+%     xticklabels={$-\pi$,$0$,$\pi$},
+%     xlabel={$\omega$}
+%   ]
+%   % Triangular top from (-π, 1/9) to (0, 1/3) to (π, 1/9)
+%   \addplot[blue, very thick] coordinates {(-3.1416,0.1111) (0,0.3333) (3.1416,0.1111)};
+%   % Optional guides
+%   \draw[red!60, dotted] (axis cs:-3.1416,0) -- (axis cs:-3.1416,1.05);
+%   \draw[red!60, dotted] (axis cs: 3.1416,0) -- (axis cs: 3.1416,1.05);
+%   \node[green!50!black, font=\scriptsize] at (axis cs:0,-0.25) {No aliasing};
+%   \end{groupplot}
+% \end{tikzpicture}
+% \end{center}
+
+% Notes:
+% \begin{itemize}
+%     \item Original $X(e^{j\omega})$ (triangular to $\pm\pi/2$) is truncated by the ideal LPF to $\pm\pi/3$, producing vertical cutoffs and a triangular top peaking at 1.
+%     \item Downsampling by $M=3$ yields $\tilde{X}_d(e^{j\omega})=\frac{1}{3}\tilde{X}(e^{j\omega/3})$: bandwidth expands to $\pm\pi$, apex is $1/3$.
+% \end{itemize}
+% \end{frame}
+
+%--------------------------------------------------
+
+
+
+%--------------------------------------------------
+
+\begin{frame}{Downsampling with Anti Aliasing - Frequency Domain}
 \small
+
+% Note: Updated SECOND plot per request:
+%   Each replica (centered at -2\pi, 0, 2\pi) is now a composite "pedestal + peak":
+%   A rectangle (constant pedestal amplitude A) spanning local window edges (±\pi/3 around its center),
+%   with a triangular cap rising to a higher peak at the replica center.
+%   Vertical lines drawn at the window cutoff frequencies (±\pi/3 for the central, shifted for outer replicas).
+%   Outside those window edges the signal is zero.
+% Adjust pedestal height via \RectH and peak height via 1/T (symbolic).
+\def\RectH{0.35} % pedestal fraction of peak (change if desired)
+
 \begin{center}
-\begin{tikzpicture}[scale=0.78]
+\begin{tikzpicture}[scale=0.7]
   \begin{groupplot}[
-    group style={group size=3 by 1, horizontal sep=1.1cm},
-    width=4.8cm,
-    height=2.7cm,
+    group style={group size=1 by 3, vertical sep=1.2cm},
+    width=11.6cm,
+    height=3.05cm,
     axis lines=middle,
+    xmin=-11.1, xmax=11.1,
     ymin=0, ymax=1.15,
     tick label style={font=\scriptsize},
     label style={font=\scriptsize},
-    title style={font=\scriptsize}
-  ]
-
-  % 1) Ideal LPF with vertical cutoffs at ±π/3
-  \nextgroupplot[
-    title={$\tilde{H}_d(e^{j\omega})$},
-    xmin=-3.4, xmax=3.4,
-    xtick={-3.1416,-1.0472,0,1.0472,3.1416},
-    xticklabels={$-\pi$,$-\pi/3$,$0$,$\pi/3$,$\pi$},
+    title style={font=\scriptsize},
+    xtick={-10.9956,-9.4248,-7.85398,-6.2832,-4.7124,-3.1416,-1.5708,0,1.5708,3.1416,4.7124,6.2832,7.85398,9.4248,10.9956},
+    xticklabels={$-7\pi/2$,$-3\pi$,$-5\pi/2$,$-2\pi$,$-3\pi/2$,$-\pi$,$-\pi/2$,$0$,$\pi/2$,$\pi$,$3\pi/2$,$2\pi$,$5\pi/2$,$3\pi$,$7\pi/2$},
     xlabel={$\omega$}
   ]
-  \addplot[red, very thick] coordinates {
-    (-3.4,0) (-3.1416,0)
-    (-1.0472,0) (-1.0472,1)
-    ( 1.0472,1) ( 1.0472,0)
-    ( 3.1416,0) ( 3.4,0)
+
+  %------------------------------------------------------
+  % Plot 1: Original spectrum with endpoints at ±Ω_N (numeric y tick 1)
+  %------------------------------------------------------
+  \def\OmegaN{2.2}
+  \nextgroupplot[
+    title={$X_c(e^{j\omega})$},
+    ytick={0,1},
+    yticklabels={$0$,$1$}
+  ]
+  \addplot[blue!80!black, very thick] coordinates {
+    (-11.1,0) (-\OmegaN,0) (0,1) (\OmegaN,0) (11.1,0)
   };
+  \node[red!70!black, font=\scriptsize, anchor=north east] at (axis cs:-\OmegaN,0) {$-\Omega_N$};
+  \node[red!70!black, font=\scriptsize, anchor=north west] at (axis cs:\OmegaN,0) {$+\Omega_N$};
+  \node[blue!60!black, font=\scriptsize] at (axis cs:0,-0.23) {Bandwidth extends to $\pm\Omega_N$};
 
-  % 2) Filtered X: original had energy to ±π/2 (triangular),
-  %    after LPF it is zeroed above ±π/3.
-  %    Show as a "trapezoid-like" outline: verticals at ±π/3 and a triangular top
+  %------------------------------------------------------
+  % Plot 2: Windowed replicas with pedestal + peak (rectangle with triangle on top)
+  % Central window edges at ±\pi/3; outer windows shifted by ±2\pi.
+  %------------------------------------------------------
   \nextgroupplot[
-    title={$\tilde{X}(e^{j\omega})$ (cut at $\pm\pi/3$)},
-    xmin=-3.4, xmax=3.4,
-    xtick={-1.0472,0,1.0472},
-    xticklabels={$-\pi/3$,$0$,$\pi/3$},
-    xlabel={$\omega$}
+    title={$X_{\text{windowed}}(e^{j\omega})$ (Window $|\omega-\omega_0|\le \pi/3$)},
+    ytick={0,1},
+    yticklabels={$0$,$1/T$}
   ]
-  % Original (pre-filter) triangular spectrum to ±π/2 (faint, dashed for context)
-  \addplot[blue!50, dashed, very thick] coordinates {(-3.4,0) (-1.5708,0) (0,1) (1.5708,0) (3.4,0)};
-  % Vertical cutoffs at ±π/3 (drop to 0 outside passband)
-  \addplot[blue, very thick] coordinates {(-1.0472,0) (-1.0472,0.3333)};
-  \addplot[blue, very thick] coordinates {( 1.0472,0.3333) ( 1.0472,0)};
-  % Triangular top within passband: value 1 at 0, value 1/3 at ±π/3
-  \addplot[blue, very thick] coordinates {(-1.0472,0.3333) (0,1) (1.0472,0.3333)};
-  % Guides at ±π/3 and ±π/2
-  \draw[red!60, dotted] (axis cs:-1.0472,0) -- (axis cs:-1.0472,1.05);
-  \draw[red!60, dotted] (axis cs: 1.0472,0) -- (axis cs: 1.0472,1.05);
-  \draw[gray!60, dotted] (axis cs:-1.5708,0) -- (axis cs:-1.5708,1.05);
-  \draw[gray!60, dotted] (axis cs: 1.5708,0) -- (axis cs: 1.5708,1.05);
+  % Constants:
+  % pi/3 = 1.0472 ; 2pi = 6.2832
+  % Outer edges: center ±2π ± π/3 = ±(2π ± π/3)
+  % Pedestal + triangle outlines given as single polygon each.
+  % Central composite shape:
+  \addplot[blue!85!black, very thick]
+    coordinates {
+      (-1.0472,0) (-1.0472,\RectH) (0,1) (1.0472,\RectH) (1.0472,0)
+    };
+  % Right composite shape (shifted +2π):
+  \addplot[orange!85!black, thick, dashed]
+    coordinates {
+      (6.2832-1.0472,0) (6.2832-1.0472,\RectH) (6.2832,1) (6.2832+1.0472,\RectH) (6.2832+1.0472,0)
+    };
+  % Left composite shape (shifted -2π):
+  \addplot[green!60!black, thick, dotted]
+    coordinates {
+      (-6.2832-1.0472,0) (-6.2832-1.0472,\RectH) (-6.2832,1) (-6.2832+1.0472,\RectH) (-6.2832+1.0472,0)
+    };
 
-  % 3) Downsampled by M=3: \tilde{X}_d(ω) = (1/3) \tilde{X}(ω/3)
-  %    Bandwidth stretches to ±π, apex scales to 1/3, edges at ±π are 1/9.
+  % Vertical window cutoff lines (central)
+  \draw[gray!55,dotted] (axis cs:-1.0472,0) -- (axis cs:-1.0472,1.05);
+  \draw[gray!55,dotted] (axis cs: 1.0472,0) -- (axis cs: 1.0472,1.05);
+  % Vertical window cutoff lines (right)
+  \draw[gray!55,dotted] (axis cs:6.2832-1.0472,0) -- (axis cs:6.2832-1.0472,1.05);
+  \draw[gray!55,dotted] (axis cs:6.2832+1.0472,0) -- (axis cs:6.2832+1.0472,1.05);
+  % Vertical window cutoff lines (left)
+  \draw[gray!55,dotted] (axis cs:-6.2832-1.0472,0) -- (axis cs:-6.2832-1.0472,1.05);
+  \draw[gray!55,dotted] (axis cs:-6.2832+1.0472,0) -- (axis cs:-6.2832+1.0472,1.05);
+
+  \node[red!70!black, font=\scriptsize] at (axis cs:0,-0.25) {Outside each window ($|\omega-\omega_0|>\pi/3$) zeroed};
+
+  %------------------------------------------------------
+  % Plot 3: Wide triangles (unchanged)
+  %------------------------------------------------------
   \nextgroupplot[
-    title={$\tilde{X}_d(e^{j\omega}) = \tfrac{1}{3}\tilde{X}(e^{j\omega/3})$ (downsample by 3)},
-    xmin=-3.4, xmax=3.4,
-    xtick={-3.1416,0,3.1416},
-    xticklabels={$-\pi$,$0$,$\pi$},
-    xlabel={$\omega$}
+    title={$X_d(e^{j\omega})$},
+    ytick={0,1},
+    yticklabels={$0$,$1/MT$}
   ]
-  % Triangular top from (-π, 1/9) to (0, 1/3) to (π, 1/9)
-  \addplot[blue, very thick] coordinates {(-3.1416,0.1111) (0,0.3333) (3.1416,0.1111)};
-  % Optional guides
-  \draw[red!60, dotted] (axis cs:-3.1416,0) -- (axis cs:-3.1416,1.05);
-  \draw[red!60, dotted] (axis cs: 3.1416,0) -- (axis cs: 3.1416,1.05);
-  \node[green!50!black, font=\scriptsize] at (axis cs:0,-0.25) {No aliasing};
+
+  % Width now = 2π (half-width π). Numerical: π = 3.1416
+  % Centers remain at 0, +2π (6.2832), -2π (-6.2832).
+  % Edges:
+  %   Central: -π .. +π  => -3.1416 .. 3.1416
+  %   Right:   2π-π .. 2π+π  => 3.1416 .. 9.4248
+  %   Left:   -2π-π .. -2π+π => -9.4248 .. -3.1416
+
+  % Central composite shape (rectangle + triangle)
+  \addplot[blue!85!black, very thick]
+    coordinates {
+      (-3.1416,0) (-3.1416,\RectH) (0,1) (3.1416,\RectH) (3.1416,0)
+    };
+
+  % Right composite shape (center +2π)
+  \addplot[orange!85!black, thick, dashed]
+    coordinates {
+      (3.1416,0) (3.1416,\RectH) (6.2832,1) (9.4248,\RectH) (9.4248,0)
+    };
+
+  % Left composite shape (center -2π)
+  \addplot[green!60!black, thick, dotted]
+    coordinates {
+      (-9.4248,0) (-9.4248,\RectH) (-6.2832,1) (-3.1416,\RectH) (-3.1416,0)
+    };
+
+  % Vertical boundary lines at all shape edges
+  \draw[gray!55,dotted] (axis cs:-3.1416,0) -- (axis cs:-3.1416,1.05);
+  \draw[gray!55,dotted] (axis cs: 3.1416,0) -- (axis cs: 3.1416,1.05);
+  \draw[gray!55,dotted] (axis cs:-9.4248,0) -- (axis cs:-9.4248,1.05);
+  \draw[gray!55,dotted] (axis cs:-3.1416,0) -- (axis cs:-3.1416,1.05);
+  \draw[gray!55,dotted] (axis cs: 3.1416,0) -- (axis cs: 3.1416,1.05);
+  \draw[gray!55,dotted] (axis cs: 9.4248,0) -- (axis cs: 9.4248,1.05);
   \end{groupplot}
 \end{tikzpicture}
 \end{center}
 
-Notes:
-\begin{itemize}
-    \item Original $X(e^{j\omega})$ (triangular to $\pm\pi/2$) is truncated by the ideal LPF to $\pm\pi/3$, producing vertical cutoffs and a triangular top peaking at 1.
-    \item Downsampling by $M=3$ yields $\tilde{X}_d(e^{j\omega})=\frac{1}{3}\tilde{X}(e^{j\omega/3})$: bandwidth expands to $\pm\pi$, apex is $1/3$.
-\end{itemize}
 \end{frame}
+
+
 
 \section{Summary}
 
