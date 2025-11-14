@@ -1,7 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1763136773.23978 "c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/lectures/lecture_master/ms_lecture_master.tex" "ms_lecture_master.pdf" "ms_lecture_master" 1763136775.08314 0
-  "../lecture13_downsampling/lecture13_downsampling.pdf" 1763136502 292800 3595b2079843392cf4c0b72c495c62b0 ""
-  "c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/lectures/lecture_master/ms_lecture_master.tex" 1763136770 4375 5b89e5edcf2d03636e7c7b134701001c ""
+["pdflatex"] 1763144270.43618 "c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/lectures/lecture_master/ms_lecture_master.tex" "ms_lecture_master.pdf" "ms_lecture_master" 1763144272.78576 0
+  "../lecture13_downsampling/lecture13_downsampling.pdf" 1763141034 296679 eea5268bcef0a14f9d5ac80ca33861be ""
+  "../lecture14_upsampling/lecture14_upsampling.pdf" 1763143905 250756 dd1c76737a0836b841a7a30f783cb2e9 ""
+  "c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/lectures/lecture_master/ms_lecture_master.tex" 1763144267 4785 bc33671762351a4d2bfa9cce58b00772 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1753824694 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1753824694 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1753824694 37912 07513ec114ac737ab54cea0152f4424b ""
@@ -58,8 +59,8 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1753831974 5572357 f0501b90ab048e2d9ec23d8a1bf903b2 ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1753832213 3604480 926ba6b19f7f90086b4f7d3958bf353f ""
   "c:/texlive/2025/texmf.cnf" 1753831940 713 e69b156964470283e0530f5060668171 ""
-  "ms_lecture_master.aux" 1763136774 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
-  "ms_lecture_master.tex" 1763136770 4375 5b89e5edcf2d03636e7c7b134701001c ""
+  "ms_lecture_master.aux" 1763144272 32 77e0dffd05b653a64f0caf3eb9bb454a "pdflatex"
+  "ms_lecture_master.tex" 1763144267 4785 bc33671762351a4d2bfa9cce58b00772 ""
   (generated)
   "ms_lecture_master.aux"
   "ms_lecture_master.log"

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1763140808.00655 "c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/lectures/lecture14_upsampling/lecture14_upsampling.tex" "lecture14_upsampling.pdf" "lecture14_upsampling" 1763140812.52197 0
-  "c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/lectures/lecture14_upsampling/lecture14_upsampling.tex" 1763140806 25632 80cc02e39ecd49b2c92d04c7bf38b8e1 ""
+["pdflatex"] 1763143901.7017 "c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/lectures/lecture14_upsampling/lecture14_upsampling.tex" "lecture14_upsampling.pdf" "lecture14_upsampling" 1763143906.19263 0
+  "c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/lectures/lecture14_upsampling/lecture14_upsampling.tex" 1763143900 19995 25842b77c5fe6000a2fdfdcc490bf1c2 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1753826901 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1753824694 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1753824694 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -44,7 +44,6 @@
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmss8.tfm" 1753825661 1296 d77f431d10d47c8ea2cc18cf45346274 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmss9.tfm" 1753825661 1320 49357c421c0d469f88b867dd0c3d10e8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm" 1753825661 1272 e2d13f0df30bf3ad990bb9d028e37f34 ""
-  "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmssi9.tfm" 1753825661 1524 db4bb1dddb7b51420776d94a5c70c2a5 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1753825661 1124 6c73e740cf17375f03eec0ee63599741 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1753825661 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1753825661 1120 8b7d695260f3cff42e636090a8002094 ""
@@ -67,7 +66,6 @@
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb" 1753824694 24420 52dbb8e8aa0069a1b987309557f8d303 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb" 1753824694 24373 a91d375736817a75026663adcb2190c1 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb" 1753824694 28902 2f5c04fd2884d1878057baa5aad22765 ""
-  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb" 1753824694 25029 6f2cec9646ca278302ed7d604e506e3e ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1753824694 32587 65067f817f408bc71a7312f3d9828a9b ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1753824694 32716 08e384dc442464e7285e891af9f45947 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1753824694 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
@@ -312,10 +310,10 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1753831974 5572357 f0501b90ab048e2d9ec23d8a1bf903b2 ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1753832213 3604480 926ba6b19f7f90086b4f7d3958bf353f ""
   "c:/texlive/2025/texmf.cnf" 1753831940 713 e69b156964470283e0530f5060668171 ""
-  "lecture14_upsampling.aux" 1763140812 3921 19f551a84e030b2643360e4855451942 "pdflatex"
-  "lecture14_upsampling.nav" 1763140812 2433 77d27e7fba0ea8a06dbda7fa2f7c0adc "pdflatex"
-  "lecture14_upsampling.out" 1763140812 531 f0761e7bc3271cf747b43c2c3a38f892 "pdflatex"
-  "lecture14_upsampling.tex" 1763140806 25632 80cc02e39ecd49b2c92d04c7bf38b8e1 ""
+  "lecture14_upsampling.aux" 1763143905 2686 4ba7fd1bb461872442e1ac9fc0c961c8 "pdflatex"
+  "lecture14_upsampling.nav" 1763143905 1589 9ee3c000d247a38a4cedc3f3cf0ae958 "pdflatex"
+  "lecture14_upsampling.out" 1763143905 340 20b3ad80c3a8a280b2a1706752c2ca76 "pdflatex"
+  "lecture14_upsampling.tex" 1763143900 19995 25842b77c5fe6000a2fdfdcc490bf1c2 ""
   (generated)
   "lecture14_upsampling.aux"
   "lecture14_upsampling.log"

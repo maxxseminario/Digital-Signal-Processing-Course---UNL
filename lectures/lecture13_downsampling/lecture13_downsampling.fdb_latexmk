@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1763140910.65425 "c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/lectures/lecture13_downsampling/lecture13_downsampling.tex" "lecture13_downsampling.pdf" "lecture13_downsampling" 1763140920.43661 0
-  "c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/lectures/lecture13_downsampling/lecture13_downsampling.tex" 1763140899 25454 6331393169c416ab15a5cf08c8cf0a46 ""
+["pdflatex"] 1763141024.27233 "c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/lectures/lecture13_downsampling/lecture13_downsampling.tex" "lecture13_downsampling.pdf" "lecture13_downsampling" 1763141034.46376 0
+  "c:/Users/Maxx Seminario/Home/Courses/ECEN/ECEN-463(Inst)(DSP)/latek/lectures/lecture13_downsampling/lecture13_downsampling.tex" 1763141022 25395 401a5090067b2cf67400adc725123f04 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1753826901 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1753824694 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1753824694 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -319,10 +319,10 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1753831974 5572357 f0501b90ab048e2d9ec23d8a1bf903b2 ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1753832213 3604480 926ba6b19f7f90086b4f7d3958bf353f ""
   "c:/texlive/2025/texmf.cnf" 1753831940 713 e69b156964470283e0530f5060668171 ""
-  "lecture13_downsampling.aux" 1763140920 2819 43322db0c60041ce7f25f84acb838c9b "pdflatex"
-  "lecture13_downsampling.nav" 1763140920 1685 dad240a609b4dc5c74e31a0ff505d9a4 "pdflatex"
-  "lecture13_downsampling.out" 1763140920 342 98fc3d7a5ce4bcac2ee8c043d31a80ab "pdflatex"
-  "lecture13_downsampling.tex" 1763140899 25454 6331393169c416ab15a5cf08c8cf0a46 ""
+  "lecture13_downsampling.aux" 1763141034 2819 43322db0c60041ce7f25f84acb838c9b "pdflatex"
+  "lecture13_downsampling.nav" 1763141034 1685 dad240a609b4dc5c74e31a0ff505d9a4 "pdflatex"
+  "lecture13_downsampling.out" 1763141034 342 98fc3d7a5ce4bcac2ee8c043d31a80ab "pdflatex"
+  "lecture13_downsampling.tex" 1763141022 25395 401a5090067b2cf67400adc725123f04 ""
   (generated)
   "lecture13_downsampling.aux"
   "lecture13_downsampling.log"
