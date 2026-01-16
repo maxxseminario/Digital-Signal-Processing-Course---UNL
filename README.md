@@ -1,10 +1,12 @@
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
 # Digital Signal Processing Course – University of Nebraska–Lincoln
 
 **Author:** Maxx Seminario   
 **Instructor:** Maxx Seminario    
 **First Taught:** Fall 2025  
 >**About the Author:**   
->Maxx Seminario is a PhD student studying integrated circuit design at the University of Nebraska–Lincoln, and is responsible for creating and curating this course - Digital Signal Processing - ECEN 863.  
+>Maxx Seminario is a PhD student studying int egrated circuit design at the University of Nebraska–Lincoln, and is responsible for creating and curating this course - Digital Signal Processing - ECEN 863.  
 **Author Contact:** mseminario2@huskers.unl.edu  
 
 This repository contains LaTeX code and course materials for ECEN 463: Digital Signal Processing, offered at the University of Nebraska–Lincoln. The course is organized into lectures, assignments, and quizzes.
@@ -27,12 +29,14 @@ This repository contains LaTeX code and course materials for ECEN 463: Digital S
   10. Z Transform Properties
   11. Sampling
   12. Discrete Processing of Continous Time Signals
-  13. Continuous Time Processing of Discrete Signals
-  14. Downsampling
+  13. Continuous Processing of Discrete Time Signals 
+  14. Downampling 
   15. Upsampling
-  16. Sigma Delta Modulation 
-  17. IIR Filtering
-  18. FIR Filtering
+  16. Sigma Delta Modulation (SDM)
+  16. Discrete Filtering
+  17. Infinite Impulse Response (IIR) Filtering
+  18. Finite Impulse Response (FIR) Filtering  
+
 
 - **assignments/**  
   Homework and project assignments for the course.
@@ -73,4 +77,22 @@ Please note that there is a separate, private repository containing exams and se
 
 ---
 
-Feel free to use, adapt, and contribute to these materials for educational purposes.
+## License
+
+This work is licensed under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+
+You are free to:
+- **Share** — copy and redistribute the material
+- **Adapt** — remix, transform, and build upon the material
+
+Under the following terms:
+- **Attribution** — You must give appropriate credit
+- **ShareAlike** — If you remix, you must distribute under the same license
+
+---
+
+**Questions?** Contact Maxx Seminario at mseminario2@huskers.unl.edu
+
+---
+
+*Last updated: January 2026*
