@@ -24,10 +24,10 @@ push:  clean update_docs
 			git commit -m \"$$message\"; \
 			$$force = Read-Host 'Force push? (y/n)'; \
 			if ($$force -eq 'y') { \
-				git push origin lecture12 --force; \
+				git push origin main --force; \
 				Write-Host 'Force pushed to GitHub!' -ForegroundColor Yellow \
 			} else { \
-				git push origin lecture12; \
+				git push origin main; \
 				Write-Host 'Pushed to GitHub!' -ForegroundColor Green \
 			} \
 		} else { \
